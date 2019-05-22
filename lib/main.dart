@@ -132,14 +132,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             buttons[0].focus();
                             if (inputs != null) {
                               input = inputs[0];
-                              console.log('HEEEEEEEEEEEEEEYYYYYYYYY');
                               InputValue.postMessage(input.value);
                               input.addEventListener('focus', (_) => {
-                                console.log('focus');
                                 Focus.postMessage('focus');
                               }, true);
                               input.addEventListener('focusout', (_) => {
-                                console.log('unfocus');
                                 Focus.postMessage('focusout');
                               }, true)
                             }
